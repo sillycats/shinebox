@@ -130,8 +130,9 @@ public class ApiConfig {
 
     public void loadConfig(boolean useCache, LoadConfigCallback callback, Activity activity) {
         // Embedded Source : Update in Strings.xml if required
-        String API_URL = "https://jihulab.com/okcaptain/kko/-/raw/main/ok.txt";
-        String apiUrl = Hawk.get(HawkConfig.API_URL, HomeActivity.getRes().getString(R.string.app_source));
+        String apiUrl = "https://jihulab.com/okcaptain/kko/-/raw/main/ok.txt";
+       // String apiUrl = Hawk.get(HawkConfig.API_URL, HomeActivity.getRes().getString(R.string.app_source));
+        
         if (apiUrl.isEmpty()) {
             callback.error("源地址为空");
             return;
